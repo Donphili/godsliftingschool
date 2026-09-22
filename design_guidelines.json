@@ -1,0 +1,190 @@
+{
+  "brand_identity": {
+    "name": "God's Lifting International School",
+    "mission": "Divine instruction, qualitative education, global standard.",
+    "tone": "Trustworthy, Academic, Divine, Modern, Growth-Oriented",
+    "archetype": "Organic & Earthy (Trust/Growth) mixed with Swiss Authority",
+    "target_audience": "Parents, Students, Teachers in Lagos, Nigeria"
+  },
+  "typography": {
+    "headings": {
+      "font_family": "Outfit, sans-serif",
+      "weights": ["500", "700", "900"],
+      "usage": "Main headers, section titles, hero text. Use tight tracking (-0.02em).",
+      "fallback": "sans-serif"
+    },
+    "body": {
+      "font_family": "Plus Jakarta Sans, sans-serif",
+      "weights": ["400", "500", "600"],
+      "usage": "Paragraphs, UI labels, data tables. Use normal or slightly loose tracking.",
+      "fallback": "sans-serif"
+    },
+    "accents": {
+      "font_family": "Caveat, cursive",
+      "usage": "Small handwritten notes, 'divine' quotes, or playful accents for pre-school sections."
+    }
+  },
+  "colors": {
+    "primary": {
+      "DEFAULT": "#1E3A8A",
+      "foreground": "#FFFFFF",
+      "description": "Royal Blue - Represents Trust, Authority, and Intelligence."
+    },
+    "secondary": {
+      "DEFAULT": "#F59E0B",
+      "foreground": "#0F172A",
+      "description": "Golden Amber - Represents Excellence, Divinity, and Success."
+    },
+    "accent": {
+      "DEFAULT": "#0EA5E9",
+      "foreground": "#FFFFFF",
+      "description": "Sky Blue - Represents Growth, Clarity, and Peace."
+    },
+    "background": {
+      "DEFAULT": "#F8FAFC",
+      "paper": "#FFFFFF",
+      "subtle": "#F1F5F9"
+    },
+    "text": {
+      "primary": "#0F172A",
+      "secondary": "#475569",
+      "muted": "#94A3B8"
+    },
+    "status": {
+      "success": "#10B981",
+      "warning": "#F59E0B",
+      "error": "#EF4444",
+      "info": "#3B82F6"
+    }
+  },
+  "visual_enhancers": {
+    "gradients": {
+      "hero": "bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900",
+      "gold_glow": "bg-gradient-to-r from-amber-400 to-orange-500",
+      "subtle_mesh": "bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-100 via-transparent to-transparent"
+    },
+    "shadows": {
+      "card": "shadow-[0_2px_8px_rgba(0,0,0,0.08)]",
+      "float": "shadow-[0_8px_30px_rgb(0,0,0,0.12)]",
+      "glow": "shadow-[0_0_15px_rgba(245,158,11,0.3)]"
+    },
+    "borders": {
+      "subtle": "border border-slate-200",
+      "glass": "border border-white/20"
+    },
+    "radius": {
+      "default": "rounded-xl",
+      "button": "rounded-full",
+      "card": "rounded-2xl"
+    }
+  },
+  "layout_strategies": {
+    "marketing": {
+      "grid_system": "Bento Grid (Tetris Mode)",
+      "spacing": "Generous (p-8 to p-24)",
+      "container": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+      "alignment": "Asymmetrical balance. Avoid centering everything."
+    },
+    "dashboard": {
+      "grid_system": "High Density Grid (12 columns)",
+      "spacing": "Compact (p-4 to p-6)",
+      "card_style": "Flat white cards with subtle borders, no heavy shadows.",
+      "sidebar": "Fixed width (250px), dark blue or white with distinct active states."
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-primary text-white hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300 rounded-full px-8 py-3 font-semibold",
+      "secondary": "bg-white text-primary border-2 border-primary/10 hover:border-primary/30 hover:bg-blue-50 transition-all duration-300 rounded-full px-8 py-3 font-semibold",
+      "ghost": "text-slate-600 hover:text-primary hover:bg-slate-100 rounded-lg px-4 py-2"
+    },
+    "cards": {
+      "feature": "bg-white p-8 rounded-2xl border border-slate-100 shadow-card hover:shadow-float transition-all duration-300 group",
+      "stat": "bg-white p-6 rounded-xl border border-slate-100 flex flex-col gap-2"
+    },
+    "inputs": {
+      "default": "h-12 rounded-lg border-slate-200 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all bg-slate-50 focus:bg-white"
+    }
+  },
+  "image_urls": {
+    "hero": [
+      {
+        "url": "https://images.unsplash.com/photo-1632215863153-0dae7657d0a9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODh8MHwxfHNlYXJjaHwxfHxoYXBweSUyMGFmcmljYW4lMjBzdHVkZW50cyUyMGluJTIwY2xhc3Nyb29tfGVufDB8fHx8MTc2OTc2NDYwOXww&ixlib=rb-4.1.0&q=85",
+        "description": "Happy students in classroom - Hero Section Main",
+        "category": "hero"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1666281134747-caa676fc2201?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODh8MHwxfHNlYXJjaHwzfHxoYXBweSUyMGFmcmljYW4lMjBzdHVkZW50cyUyMGluJTIwY2xhc3Nyb29tfGVufDB8fHx8MTc2OTc2NDYwOXww&ixlib=rb-4.1.0&q=85",
+        "description": "Students studying together - About Section",
+        "category": "about"
+      }
+    ],
+    "facilities": [
+      {
+        "url": "https://images.unsplash.com/photo-1762354766812-86025ea7e2bd?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzl8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBzY2hvb2wlMjBidWlsZGluZyUyMGV4dGVyaW9yJTIwYXJjaGl0ZWN0dXJlfGVufDB8fHx8MTc2OTc2NDYxMXww&ixlib=rb-4.1.0&q=85",
+        "description": "Modern School Building - Campus Tour",
+        "category": "campus"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1744809495173-217ca4faa8bc?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzN8MHwxfHNlYXJjaHwxfHxzdHVkZW50cyUyMGluJTIwY29tcHV0ZXIlMjBsYWIlMjBhZnJpY2FuJTIwc2Nob29sfGVufDB8fHx8MTc2OTc2NDYyM3ww&ixlib=rb-4.1.0&q=85",
+        "description": "Student in Computer Lab - Facilities",
+        "category": "facilities"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1506185386801-3d7bc0ddd2bf?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHwxfHxhZnJpY2FuJTIwc2Nob29sJTIwc3R1ZGVudHMlMjBwbGF5aW5nJTIwZm9vdGJhbGwlMjBzcG9ydHN8ZW58MHx8fHwxNzY5NzY0NjI1fDA&ixlib=rb-4.1.0&q=85",
+        "description": "Students playing football - Sports/Extra-curricular",
+        "category": "sports"
+      }
+    ],
+    "people": [
+      {
+        "url": "https://images.unsplash.com/photo-1744809482817-9a9d4fc280af?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNzl8MHwxfHNlYXJjaHwxfHxhZnJpY2FuJTIwdGVhY2hlciUyMHRlYWNoaW5nJTIwaW4lMjBjbGFzc3Jvb218ZW58MHx8fHwxNzY5NzY0NjIxfDA&ixlib=rb-4.1.0&q=85",
+        "description": "Teacher teaching - Academic Excellence",
+        "category": "staff"
+      }
+    ]
+  },
+  "motion": {
+    "entrance": {
+      "initial": { "opacity": 0, "y": 20 },
+      "animate": { "opacity": 1, "y": 0 },
+      "transition": { "duration": 0.5, "ease": "easeOut" }
+    },
+    "hover": {
+      "scale": 1.02,
+      "transition": { "duration": 0.2 }
+    },
+    "scroll": "Use Lenis for smooth scrolling. Parallax effects on hero images."
+  },
+  "accessibility": {
+    "contrast": "Ensure all text meets WCAG AA standards. Use dark slate (#0F172A) on light backgrounds.",
+    "focus": "Visible focus rings (ring-2 ring-primary) on all interactive elements.",
+    "labels": "All inputs must have visible labels or aria-labels."
+  },
+  "instructions_to_main_agent": [
+    "Use 'Outfit' font for all headings and 'Plus Jakarta Sans' for body text.",
+    "Implement the 'Bento Grid' layout for the features section on the homepage.",
+    "Use the provided image URLs for specific sections (Hero, About, Facilities).",
+    "Ensure the 'Apply Now' button is prominent and uses the primary Royal Blue color.",
+    "The Student Portal should be clean, distraction-free, and mobile-optimized.",
+    "Use Shadcn UI components for all forms (Admission, Contact, Login).",
+    "Add 'data-testid' to all interactive elements.",
+    "Do NOT use generic 'Lorem Ipsum'. Use realistic text related to education and the school's mission.",
+    "For the 'Results' page, use a clean table layout with clear pass/fail indicators.",
+    "Integrate Paystack mock UI for the payment section."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "Dark colors look good when used independently without gradients. DO NOT use dark colors as gradients.",
+    "Don't make generic centered layouts, simplistic gradients, and uniform styling.",
+    "Create depth through layered design elements with z-index hierarchy.",
+    "Use glass-morphism effects with backdrop filters (12-24px blur) for sticky headers.",
+    "You MUST NOT apply universal transition. Eg: 'transition: all'. This results in breaking transforms.",
+    "You MUST NOT center align the app container.",
+    "Always use modern button styles like pill-shaped, or sharp button with interaction animations.",
+    "NEVER use AI assistant Emoji characters like 🤖🧠 etc for icons.",
+    "Every interaction needs micro-animations - hover states, transitions.",
+    "Use 2-3x more spacing than feels comfortable.",
+    "Subtle grain textures, noise overlays, custom cursors, selection states, and loading animations.",
+    "Use 'sonner' for toasts."
+  ]
+}

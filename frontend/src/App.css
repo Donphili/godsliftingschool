@@ -1,0 +1,210 @@
+/* Additional App Styles */
+
+/* Hero Section Background Pattern */
+.hero-pattern {
+    background-image: 
+        radial-gradient(ellipse at top right, rgba(245, 158, 11, 0.1), transparent 50%),
+        radial-gradient(ellipse at bottom left, rgba(14, 165, 233, 0.1), transparent 50%);
+}
+
+/* Card hover effects */
+.card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+}
+
+/* Button animations */
+.btn-primary {
+    transition: background-color 0.2s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+/* Feature card styles */
+.feature-card {
+    @apply bg-white p-8 rounded-2xl border border-slate-100;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.feature-card:hover {
+    box-shadow: 0 8px 30px rgb(0,0,0,0.12);
+    transform: translateY(-4px);
+}
+
+/* Stat card styles */
+.stat-card {
+    @apply bg-white p-6 rounded-xl border border-slate-100 flex flex-col gap-2;
+}
+
+/* Table styles */
+.result-table {
+    @apply w-full border-collapse;
+}
+
+.result-table th {
+    @apply bg-slate-50 text-left p-4 font-semibold text-slate-700 border-b border-slate-200;
+}
+
+.result-table td {
+    @apply p-4 border-b border-slate-100;
+}
+
+.result-table tr:hover td {
+    @apply bg-slate-50;
+}
+
+/* Grade badges */
+.grade-a {
+    @apply bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full font-semibold text-sm;
+}
+
+.grade-b {
+    @apply bg-blue-100 text-blue-700 px-3 py-1 rounded-full font-semibold text-sm;
+}
+
+.grade-c {
+    @apply bg-amber-100 text-amber-700 px-3 py-1 rounded-full font-semibold text-sm;
+}
+
+.grade-d {
+    @apply bg-orange-100 text-orange-700 px-3 py-1 rounded-full font-semibold text-sm;
+}
+
+.grade-f {
+    @apply bg-red-100 text-red-700 px-3 py-1 rounded-full font-semibold text-sm;
+}
+
+/* Status badges */
+.status-pending {
+    @apply bg-amber-100 text-amber-700 px-3 py-1 rounded-full font-medium text-sm;
+}
+
+.status-approved {
+    @apply bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full font-medium text-sm;
+}
+
+.status-rejected {
+    @apply bg-red-100 text-red-700 px-3 py-1 rounded-full font-medium text-sm;
+}
+
+/* Dashboard sidebar */
+.sidebar-link {
+    @apply flex items-center gap-3 px-4 py-3 rounded-lg text-slate-600 font-medium;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.sidebar-link:hover {
+    @apply bg-slate-100 text-primary;
+}
+
+.sidebar-link.active {
+    @apply bg-primary text-white;
+}
+
+/* Loading spinner */
+.spinner {
+    @apply animate-spin h-5 w-5 border-2 border-white border-t-transparent rounded-full;
+}
+
+/* Image hover effect */
+.img-hover {
+    @apply overflow-hidden;
+}
+
+.img-hover img {
+    transition: transform 0.5s ease;
+}
+
+.img-hover:hover img {
+    transform: scale(1.05);
+}
+
+/* Bento grid */
+.bento-grid {
+    @apply grid gap-6;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* Responsive container */
+.container-custom {
+    @apply max-w-7xl mx-auto px-4;
+}
+
+@media (min-width: 640px) {
+    .container-custom {
+        @apply px-6;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container-custom {
+        @apply px-8;
+    }
+}
+
+/* Section spacing */
+.section-padding {
+    @apply py-16;
+}
+
+@media (min-width: 768px) {
+    .section-padding {
+        @apply py-24;
+    }
+}
+
+/* Shadow utilities */
+.shadow-card {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.shadow-float {
+    box-shadow: 0 8px 30px rgb(0,0,0,0.12);
+}
+
+.shadow-glow {
+    box-shadow: 0 0 15px rgba(245,158,11,0.3);
+}
+
+/* Mobile menu */
+.mobile-menu {
+    @apply fixed inset-0 bg-white z-50;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+}
+
+.mobile-menu.open {
+    transform: translateX(0);
+}
+
+/* Mobile responsive admin/teacher sidebar */
+@media (max-width: 1023px) {
+    aside.fixed {
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+    }
+    
+    main.ml-64 {
+        margin-left: 0 !important;
+    }
+}
+
+/* Mobile responsive tables */
+@media (max-width: 768px) {
+    table {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}
