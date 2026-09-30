@@ -1,5 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
+import ThemeToggle from "../ThemeToggle";
 import {
   LayoutDashboard,
   Users,
@@ -40,7 +41,7 @@ const AdminSidebar = () => {
   const isActive = (path) => location.pathname === path;
 
   return (
-    <aside className="w-64 bg-ink border-r-4 border-ink min-h-screen fixed left-0 top-0 z-40">
+    <aside className="w-64 bg-ink border-r-4 border-sticker min-h-screen fixed left-0 top-0 z-40">
       <div className="flex flex-col h-screen p-6 overflow-y-auto">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3 mb-8" data-testid="admin-logo">
@@ -54,9 +55,12 @@ const AdminSidebar = () => {
         </Link>
 
         {/* User Info */}
-        <div className="bg-white/5 border border-white/10 rounded-xl p-4 mb-6">
-          <p className="font-semibold text-white text-sm">{user?.full_name}</p>
-          <p className="text-xs text-sun capitalize font-semibold">{user?.role}</p>
+        <div className="bg-card/5 border border-white/10 rounded-xl p-4 mb-6 flex items-center justify-between gap-2">
+          <div className="min-w-0">
+            <p className="font-semibold text-white text-sm truncate">{user?.full_name}</p>
+            <p className="text-xs text-sun capitalize font-semibold">{user?.role}</p>
+          </div>
+          <ThemeToggle className="!border-white/20 !bg-white/10 shrink-0" />
         </div>
 
         {/* Navigation */}
@@ -71,7 +75,7 @@ const AdminSidebar = () => {
                 className={`flex items-center gap-3 px-4 py-3 rounded-xl font-semibold text-sm transition-colors duration-200 ${
                   isActive(item.path)
                     ? "bg-sun text-ink"
-                    : "text-white/60 hover:bg-white/10 hover:text-white"
+                    : "text-white/60 hover:bg-card/10 hover:text-white"
                 }`}
               >
                 <Icon className="w-5 h-5" />
@@ -85,7 +89,7 @@ const AdminSidebar = () => {
         <div className="mt-auto border-t border-white/10 pt-4 px-0 pb-2 space-y-1">
           <Link
             to="/"
-            className="flex items-center gap-3 px-4 py-3 rounded-xl text-white/60 hover:bg-white/10 hover:text-white font-semibold text-sm"
+            className="flex items-center gap-3 px-4 py-3 rounded-xl text-white/60 hover:bg-card/10 hover:text-white font-semibold text-sm"
             data-testid="back-to-site"
           >
             <Home className="w-5 h-5" />

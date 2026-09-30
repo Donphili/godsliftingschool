@@ -106,7 +106,7 @@ const ContactPage = () => {
                       <div className="w-20 h-20 rounded-full bg-emerald-100 flex items-center justify-center mx-auto mb-6">
                         <CheckCircle className="w-10 h-10 text-emerald-600" />
                       </div>
-                      <h3 className="text-2xl font-bold text-ink mb-2">Message Sent!</h3>
+                      <h3 className="text-2xl font-bold text-foreground mb-2">Message Sent!</h3>
                       <p className="text-muted-foreground mb-6">
                         Thank you for reaching out. We'll respond to your inquiry shortly.
                       </p>
@@ -223,7 +223,7 @@ const ContactPage = () => {
                           <Icon className="w-6 h-6 text-primary" />
                         </div>
                         <div>
-                          <h3 className="font-semibold text-ink mb-1">{info.title}</h3>
+                          <h3 className="font-semibold text-foreground mb-1">{info.title}</h3>
                           {Array.isArray(info.content) ? (
                             <div className="space-y-1">
                               {info.content.map((item, i) => (

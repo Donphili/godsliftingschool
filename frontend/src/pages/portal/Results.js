@@ -213,13 +213,13 @@ Tel: 08034494498, 09012077546
   };
 
   return (
-    <div className="min-h-screen bg-cream">
+    <div className="min-h-screen bg-background">
       <PortalSidebar />
       
       <main className="ml-64 p-8">
         {/* Header */}
         <div className="mb-8">
-          <h1 className="text-2xl font-bold text-ink" data-testid="results-title">
+          <h1 className="text-2xl font-bold text-foreground" data-testid="results-title">
             My Results
           </h1>
           <p className="text-muted-foreground">View and download your academic results</p>
@@ -311,7 +311,7 @@ Tel: 08034494498, 09012077546
                         <FileText className="w-7 h-7 text-primary" />
                       </div>
                       <div>
-                        <h3 className="font-bold text-ink">{result.session}</h3>
+                        <h3 className="font-bold text-foreground">{result.session}</h3>
                         <p className="text-muted-foreground">{result.term}</p>
                       </div>
                     </div>
@@ -356,7 +356,7 @@ Tel: 08034494498, 09012077546
           <Card className="border-0 shadow-card">
             <CardContent className="py-12 text-center">
               <FileText className="w-16 h-16 text-slate-300 mx-auto mb-4" />
-              <h3 className="text-lg font-semibold text-ink mb-2">No Results Match Your Filter</h3>
+              <h3 className="text-lg font-semibold text-foreground mb-2">No Results Match Your Filter</h3>
               <p className="text-muted-foreground">Try selecting different session or term</p>
             </CardContent>
           </Card>
@@ -364,7 +364,7 @@ Tel: 08034494498, 09012077546
           <Card className="border-0 shadow-card">
             <CardContent className="py-12 text-center">
               <FileText className="w-16 h-16 text-slate-300 mx-auto mb-4" />
-              <h3 className="text-lg font-semibold text-ink mb-2">No Results Yet</h3>
+              <h3 className="text-lg font-semibold text-foreground mb-2">No Results Yet</h3>
               <p className="text-muted-foreground">Enter your student ID and search to view your results</p>
             </CardContent>
           </Card>
@@ -472,7 +472,7 @@ Tel: 08034494498, 09012077546
                       <p className="font-semibold">{bankDetails.account_name}</p>
                     </div>
                   </div>
-                  <div className="flex items-center justify-between bg-white rounded-lg p-3">
+                  <div className="flex items-center justify-between bg-card rounded-lg p-3">
                     <div>
                       <p className="text-muted-foreground text-sm">Account Number</p>
                       <p className="text-xl font-bold text-primary">{bankDetails.account_number}</p>
@@ -490,7 +490,7 @@ Tel: 08034494498, 09012077546
 
               {/* Result Info */}
               {paymentResult && (
-                <div className="bg-cream rounded-lg p-3">
+                <div className="bg-background rounded-lg p-3">
                   <p className="text-sm text-muted-foreground">Paying for:</p>
                   <p className="font-semibold">{paymentResult.session} - {paymentResult.term}</p>
                 </div>

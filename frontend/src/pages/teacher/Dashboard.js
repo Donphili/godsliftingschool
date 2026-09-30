@@ -33,11 +33,11 @@ const TeacherDashboard = () => {
   const teacher = data?.teacher || {};
 
   return (
-    <div className="min-h-screen bg-cream">
+    <div className="min-h-screen bg-background">
       <TeacherSidebar />
       <main className="ml-64 p-8">
         <div className="mb-8">
-          <h1 className="text-2xl font-bold text-ink" data-testid="teacher-dashboard-title">
+          <h1 className="text-2xl font-bold text-foreground" data-testid="teacher-dashboard-title">
             Welcome, {teacher.full_name || "Teacher"}
           </h1>
           <p className="text-muted-foreground">Manage your classes and student results</p>
@@ -58,7 +58,7 @@ const TeacherDashboard = () => {
                         <Users className="w-6 h-6 text-violet" />
                       </div>
                       <div>
-                        <p className="text-2xl font-bold text-ink">{stats.total_students || 0}</p>
+                        <p className="text-2xl font-bold text-foreground">{stats.total_students || 0}</p>
                         <p className="text-sm text-muted-foreground">My Students</p>
                       </div>
                     </div>
@@ -74,7 +74,7 @@ const TeacherDashboard = () => {
                         <FileText className="w-6 h-6 text-emerald-600" />
                       </div>
                       <div>
-                        <p className="text-2xl font-bold text-ink">{stats.total_results_uploaded || 0}</p>
+                        <p className="text-2xl font-bold text-foreground">{stats.total_results_uploaded || 0}</p>
                         <p className="text-sm text-muted-foreground">Results Uploaded</p>
                       </div>
                     </div>
@@ -89,7 +89,7 @@ const TeacherDashboard = () => {
                       <BookOpen className="w-6 h-6 text-sun" />
                     </div>
                     <div>
-                      <p className="text-2xl font-bold text-ink">{stats.assigned_classes_count || 0}</p>
+                      <p className="text-2xl font-bold text-foreground">{stats.assigned_classes_count || 0}</p>
                       <p className="text-sm text-muted-foreground">Assigned Classes</p>
                     </div>
                   </div>
@@ -100,7 +100,7 @@ const TeacherDashboard = () => {
             {teacher.assigned_classes?.length > 0 && (
               <Card className="border-0 shadow-card">
                 <CardContent className="p-6">
-                  <h3 className="font-semibold text-ink mb-4">Your Assigned Classes</h3>
+                  <h3 className="font-semibold text-foreground mb-4">Your Assigned Classes</h3>
                   <div className="flex flex-wrap gap-2">
                     {teacher.assigned_classes.map((cls) => (
                       <span key={cls} className="px-3 py-1.5 bg-emerald-50 text-emerald-700 rounded-full text-sm font-medium">

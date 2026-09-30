@@ -85,7 +85,7 @@ const EventsPage = () => {
             <div>
               <Card className="border-0 shadow-card sticky top-24" data-testid="events-calendar">
                 <CardContent className="p-6">
-                  <h3 className="font-bold text-lg text-ink mb-4">Select Date</h3>
+                  <h3 className="font-bold text-lg text-foreground mb-4">Select Date</h3>
                   <Calendar
                     mode="single"
                     selected={selectedDate}
@@ -134,7 +134,7 @@ const EventsPage = () => {
                   <div className="w-20 h-20 rounded-full bg-slate-100 flex items-center justify-center mx-auto mb-6">
                     <CalendarDays className="w-10 h-10 text-slate-400" />
                   </div>
-                  <h3 className="text-xl font-semibold text-ink mb-2">No Events on This Date</h3>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">No Events on This Date</h3>
                   <p className="text-muted-foreground">Select another date or view all events.</p>
                 </div>
               ) : events.length === 0 ? (
@@ -142,12 +142,12 @@ const EventsPage = () => {
                   <div className="w-20 h-20 rounded-full bg-slate-100 flex items-center justify-center mx-auto mb-6">
                     <CalendarDays className="w-10 h-10 text-slate-400" />
                   </div>
-                  <h3 className="text-xl font-semibold text-ink mb-2">No Upcoming Events</h3>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">No Upcoming Events</h3>
                   <p className="text-muted-foreground">Check back later for scheduled events.</p>
                 </div>
               ) : (
                 <div className="space-y-6">
-                  <h3 className="font-bold text-xl text-ink">
+                  <h3 className="font-bold text-xl text-foreground">
                     {selectedDate ? `Events on ${format(selectedDate, "MMMM dd, yyyy")}` : "All Events"}
                   </h3>
                   
@@ -170,7 +170,7 @@ const EventsPage = () => {
                           </span>
                         </div>
                         <CardContent className="p-6 flex-1">
-                          <h4 className="text-xl font-bold text-ink mb-2">{event.title}</h4>
+                          <h4 className="text-xl font-bold text-foreground mb-2">{event.title}</h4>
                           <p className="text-muted-foreground mb-4 line-clamp-2">{event.description}</p>
                           <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
                             <span className="flex items-center gap-1">

@@ -9,7 +9,7 @@ const Footer = () => {
           {/* School Info */}
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
+              <div className="w-12 h-12 rounded-full bg-card/10 flex items-center justify-center">
                 <GraduationCap className="w-7 h-7 text-sun" />
               </div>
               <div>
@@ -82,21 +82,21 @@ const Footer = () => {
             <div className="flex gap-4 mb-8">
               <a 
                 href="#" 
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-coral transition-colors duration-200"
+                className="w-10 h-10 rounded-full bg-card/10 flex items-center justify-center hover:bg-coral transition-colors duration-200"
                 data-testid="social-facebook"
               >
                 <Facebook className="w-5 h-5" />
               </a>
               <a 
                 href="#" 
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-coral transition-colors duration-200"
+                className="w-10 h-10 rounded-full bg-card/10 flex items-center justify-center hover:bg-coral transition-colors duration-200"
                 data-testid="social-twitter"
               >
                 <Twitter className="w-5 h-5" />
               </a>
               <a 
                 href="#" 
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-coral transition-colors duration-200"
+                className="w-10 h-10 rounded-full bg-card/10 flex items-center justify-center hover:bg-coral transition-colors duration-200"
                 data-testid="social-instagram"
               >
                 <Instagram className="w-5 h-5" />

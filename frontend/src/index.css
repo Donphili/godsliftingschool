@@ -41,10 +41,42 @@
         --brand-lime: 75 100% 48%;
         --brand-sky: 173 70% 50%;
         --brand-cream: 34 100% 97%;
+
+        /* Sticker border — theme-aware outline used on cards/hero frames */
+        --sticker-border: 259 61% 11%;
+    }
+
+    .dark {
+        --background: 259 45% 7%;
+        --foreground: 34 60% 95%;
+        --card: 259 35% 11%;
+        --card-foreground: 34 60% 95%;
+        --popover: 259 35% 11%;
+        --popover-foreground: 34 60% 95%;
+        --primary: 262 83% 65%;
+        --primary-foreground: 259 61% 8%;
+        --secondary: 43 100% 62%;
+        --secondary-foreground: 259 61% 11%;
+        --muted: 259 25% 16%;
+        --muted-foreground: 255 15% 65%;
+        --accent: 358 100% 70%;
+        --accent-foreground: 259 61% 8%;
+        --destructive: 358 90% 60%;
+        --destructive-foreground: 0 0% 100%;
+        --border: 259 20% 22%;
+        --input: 259 20% 22%;
+        --ring: 262 83% 65%;
+
+        --brand-cream: 259 45% 7%;
+        --sticker-border: 34 60% 92%;
     }
 }
 
 @layer base {
+    .dark body {
+        background-color: hsl(var(--background));
+    }
+
     * {
         @apply border-border;
     }
@@ -96,11 +128,11 @@
     }
 
     .shadow-sticker {
-        box-shadow: 6px 6px 0 hsl(var(--ink));
+        box-shadow: 6px 6px 0 hsl(var(--sticker-border));
     }
 
     .shadow-sticker-lg {
-        box-shadow: 10px 10px 0 hsl(var(--ink));
+        box-shadow: 10px 10px 0 hsl(var(--sticker-border));
     }
 
     .shadow-sticker-violet {

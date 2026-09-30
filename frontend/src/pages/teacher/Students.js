@@ -44,11 +44,11 @@ const TeacherStudents = () => {
   );
 
   return (
-    <div className="min-h-screen bg-cream">
+    <div className="min-h-screen bg-background">
       <TeacherSidebar />
       <main className="ml-64 p-8">
         <div className="mb-8">
-          <h1 className="text-2xl font-bold text-ink" data-testid="teacher-students-title">My Students</h1>
+          <h1 className="text-2xl font-bold text-foreground" data-testid="teacher-students-title">My Students</h1>
           <p className="text-muted-foreground">Students in your assigned classes</p>
         </div>
 
@@ -101,7 +101,7 @@ const TeacherStudents = () => {
             ) : (
               <div className="text-center py-12">
                 <Users className="w-16 h-16 text-slate-300 mx-auto mb-4" />
-                <h3 className="text-lg font-semibold text-ink mb-2">No Students Found</h3>
+                <h3 className="text-lg font-semibold text-foreground mb-2">No Students Found</h3>
                 <p className="text-muted-foreground">No students in your assigned classes yet</p>
               </div>
             )}

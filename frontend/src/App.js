@@ -40,12 +40,14 @@ import TeacherResults from "./pages/teacher/Results";
 
 // Context
 import { AuthProvider } from "./context/AuthContext";
+import { ThemeProvider } from "./context/ThemeContext";
 import ProtectedRoute from "./components/ProtectedRoute";
 
 import "@/App.css";
 
 function App() {
   return (
+    <ThemeProvider>
     <AuthProvider>
       <BrowserRouter>
         <Routes>
@@ -89,6 +91,7 @@ function App() {
         <Toaster position="top-right" richColors />
       </BrowserRouter>
     </AuthProvider>
+    </ThemeProvider>
   );
 }
 

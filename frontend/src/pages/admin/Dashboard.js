@@ -85,13 +85,13 @@ const AdminDashboard = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-cream">
+    <div className="min-h-screen bg-background">
       <AdminSidebar />
       
       <main className="ml-64 p-8">
         {/* Header */}
         <div className="mb-8">
-          <h1 className="text-2xl font-bold text-ink" data-testid="admin-welcome">
+          <h1 className="text-2xl font-bold text-foreground" data-testid="admin-welcome">
             Welcome, {user?.full_name}
           </h1>
           <p className="text-muted-foreground">Here's what's happening at your school</p>
@@ -114,7 +114,7 @@ const AdminDashboard = () => {
                       </div>
                       <ArrowRight className="w-5 h-5 text-slate-300" />
                     </div>
-                    <h3 className="text-3xl font-bold text-ink">
+                    <h3 className="text-3xl font-bold text-foreground">
                       {loading ? "..." : stat.value}
                     </h3>
                     <p className="text-muted-foreground text-sm">{stat.title}</p>
@@ -139,11 +139,11 @@ const AdminDashboard = () => {
                 const Icon = action.icon;
                 return (
                   <Link key={index} to={action.link}>
-                    <div className="flex items-center gap-3 p-4 rounded-xl bg-cream hover:bg-slate-100 transition-colors duration-200">
+                    <div className="flex items-center gap-3 p-4 rounded-xl bg-background hover:bg-slate-100 transition-colors duration-200">
                       <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
                         <Icon className="w-5 h-5 text-primary" />
                       </div>
-                      <span className="font-medium text-ink/80">{action.title}</span>
+                      <span className="font-medium text-foreground/80">{action.title}</span>
                     </div>
                   </Link>
                 );

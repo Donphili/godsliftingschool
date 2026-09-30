@@ -80,7 +80,7 @@ const NewsPage = () => {
               <div className="w-20 h-20 rounded-full bg-slate-100 flex items-center justify-center mx-auto mb-6">
                 <Calendar className="w-10 h-10 text-slate-400" />
               </div>
-              <h3 className="text-xl font-semibold text-ink mb-2">No News Yet</h3>
+              <h3 className="text-xl font-semibold text-foreground mb-2">No News Yet</h3>
               <p className="text-muted-foreground">Check back later for updates and announcements.</p>
             </div>
           ) : (
@@ -106,7 +106,7 @@ const NewsPage = () => {
                         <Calendar className="w-4 h-4" />
                         {formatDate(news[0].created_at)}
                       </p>
-                      <h2 className="text-2xl font-bold text-ink mb-4">{news[0].title}</h2>
+                      <h2 className="text-2xl font-bold text-foreground mb-4">{news[0].title}</h2>
                       <p className="text-muted-foreground line-clamp-3">{news[0].content}</p>
                       <span className="text-primary font-semibold mt-4 flex items-center gap-2 group-hover:gap-3 transition-all">
                         Read More <ArrowRight className="w-4 h-4" />
@@ -137,7 +137,7 @@ const NewsPage = () => {
                         <Calendar className="w-4 h-4" />
                         {formatDate(item.created_at)}
                       </p>
-                      <h3 className="text-lg font-bold text-ink mb-2 line-clamp-2">{item.title}</h3>
+                      <h3 className="text-lg font-bold text-foreground mb-2 line-clamp-2">{item.title}</h3>
                       <p className="text-muted-foreground text-sm line-clamp-3">{item.content}</p>
                     </CardContent>
                   </Card>
@@ -168,7 +168,7 @@ const NewsPage = () => {
                 <Calendar className="w-4 h-4" />
                 {formatDate(selectedNews.created_at)}
               </p>
-              <h2 className="text-2xl font-bold text-ink mb-4">{selectedNews.title}</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-4">{selectedNews.title}</h2>
               <p className="text-muted-foreground whitespace-pre-wrap">{selectedNews.content}</p>
               <button 
                 onClick={() => setSelectedNews(null)}

@@ -122,12 +122,12 @@ const TeacherResults = () => {
   const sessionOptions = ["2023/2024", "2024/2025", "2025/2026"];
 
   return (
-    <div className="min-h-screen bg-cream">
+    <div className="min-h-screen bg-background">
       <TeacherSidebar />
       <main className="ml-64 p-8">
         <div className="flex items-center justify-between mb-8">
           <div>
-            <h1 className="text-2xl font-bold text-ink" data-testid="teacher-results-title">Results Management</h1>
+            <h1 className="text-2xl font-bold text-foreground" data-testid="teacher-results-title">Results Management</h1>
             <p className="text-muted-foreground">Upload and manage student results</p>
           </div>
 
@@ -283,7 +283,7 @@ const TeacherResults = () => {
             ) : (
               <div className="text-center py-12">
                 <FileText className="w-16 h-16 text-slate-300 mx-auto mb-4" />
-                <h3 className="text-lg font-semibold text-ink mb-2">No Results Yet</h3>
+                <h3 className="text-lg font-semibold text-foreground mb-2">No Results Yet</h3>
                 <p className="text-muted-foreground">Upload results for students in your classes</p>
               </div>
             )}

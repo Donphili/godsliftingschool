@@ -200,14 +200,14 @@ const AdminResults = () => {
   const pendingRequests = accessRequests.filter(r => r.status === "pending");
 
   return (
-    <div className="min-h-screen bg-cream">
+    <div className="min-h-screen bg-background">
       <AdminSidebar />
       
       <main className="ml-64 p-8">
         {/* Header */}
         <div className="flex items-center justify-between mb-8">
           <div>
-            <h1 className="text-2xl font-bold text-ink" data-testid="results-admin-title">
+            <h1 className="text-2xl font-bold text-foreground" data-testid="results-admin-title">
               Results Management
             </h1>
             <p className="text-muted-foreground">Upload results and manage download access</p>
@@ -287,7 +287,7 @@ const AdminResults = () => {
                   
                   <div className="space-y-3">
                     {formData.subjects.map((subject, index) => (
-                      <div key={index} className="flex items-center gap-3 p-3 bg-cream rounded-lg">
+                      <div key={index} className="flex items-center gap-3 p-3 bg-background rounded-lg">
                         <div className="flex-1">
                           <Select 
                             value={subject.name}
@@ -412,7 +412,7 @@ const AdminResults = () => {
               <Card className="border-0 shadow-card">
                 <CardContent className="py-12 text-center">
                   <FileText className="w-16 h-16 text-slate-300 mx-auto mb-4" />
-                  <h3 className="text-lg font-semibold text-ink mb-2">No Results Yet</h3>
+                  <h3 className="text-lg font-semibold text-foreground mb-2">No Results Yet</h3>
                   <p className="text-muted-foreground">Upload your first student result</p>
                 </CardContent>
               </Card>
@@ -504,7 +504,7 @@ const AdminResults = () => {
                 ) : (
                   <div className="text-center py-12">
                     <Unlock className="w-16 h-16 text-slate-300 mx-auto mb-4" />
-                    <h3 className="text-lg font-semibold text-ink mb-2">No Access Requests</h3>
+                    <h3 className="text-lg font-semibold text-foreground mb-2">No Access Requests</h3>
                     <p className="text-muted-foreground">When students pay and submit receipts, they will appear here</p>
                   </div>
                 )}

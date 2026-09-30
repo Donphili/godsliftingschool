@@ -145,13 +145,13 @@ const PortalPayments = () => {
   };
 
   return (
-    <div className="min-h-screen bg-cream">
+    <div className="min-h-screen bg-background">
       <PortalSidebar />
       
       <main className="ml-64 p-8">
         {/* Header */}
         <div className="mb-8">
-          <h1 className="text-2xl font-bold text-ink" data-testid="payments-title">
+          <h1 className="text-2xl font-bold text-foreground" data-testid="payments-title">
             Payments
           </h1>
           <p className="text-muted-foreground">Pay school fees via bank transfer or online</p>
@@ -174,16 +174,16 @@ const PortalPayments = () => {
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="grid sm:grid-cols-2 gap-4">
-                    <div className="bg-white rounded-lg p-4">
+                    <div className="bg-card rounded-lg p-4">
                       <p className="text-sm text-muted-foreground mb-1">Bank Name</p>
-                      <p className="font-semibold text-ink">{bankDetails.bank_name}</p>
+                      <p className="font-semibold text-foreground">{bankDetails.bank_name}</p>
                     </div>
-                    <div className="bg-white rounded-lg p-4">
+                    <div className="bg-card rounded-lg p-4">
                       <p className="text-sm text-muted-foreground mb-1">Account Name</p>
-                      <p className="font-semibold text-ink">{bankDetails.account_name}</p>
+                      <p className="font-semibold text-foreground">{bankDetails.account_name}</p>
                     </div>
                   </div>
-                  <div className="bg-white rounded-lg p-4">
+                  <div className="bg-card rounded-lg p-4">
                     <div className="flex items-center justify-between">
                       <div>
                         <p className="text-sm text-muted-foreground mb-1">Account Number</p>
@@ -273,10 +273,10 @@ const PortalPayments = () => {
                   />
                 </div>
 
-                <div className="bg-cream rounded-xl p-4">
+                <div className="bg-background rounded-xl p-4">
                   <div className="flex justify-between items-center">
                     <span className="text-muted-foreground">Total Amount:</span>
-                    <span className="text-2xl font-bold text-ink">
+                    <span className="text-2xl font-bold text-foreground">
                       ₦{parseInt(paymentForm.amount || 0).toLocaleString()}
                     </span>
                   </div>
@@ -316,14 +316,14 @@ const PortalPayments = () => {
                     {payments.map((payment) => (
                       <div 
                         key={payment.id} 
-                        className="flex items-center gap-3 p-3 bg-cream rounded-lg"
+                        className="flex items-center gap-3 p-3 bg-background rounded-lg"
                       >
                         {getStatusIcon(payment.status)}
                         <div className="flex-1">
-                          <p className="font-medium text-ink text-sm">{payment.description}</p>
+                          <p className="font-medium text-foreground text-sm">{payment.description}</p>
                           <p className="text-xs text-muted-foreground">{payment.reference}</p>
                         </div>
-                        <span className="font-semibold text-ink">
+                        <span className="font-semibold text-foreground">
                           {formatCurrency(payment.amount)}
                         </span>
                       </div>

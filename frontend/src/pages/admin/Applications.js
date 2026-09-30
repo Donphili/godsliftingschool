@@ -84,14 +84,14 @@ const AdminApplications = () => {
   };
 
   return (
-    <div className="min-h-screen bg-cream">
+    <div className="min-h-screen bg-background">
       <AdminSidebar />
       
       <main className="ml-64 p-8">
         {/* Header */}
         <div className="flex items-center justify-between mb-8">
           <div>
-            <h1 className="text-2xl font-bold text-ink" data-testid="applications-title">
+            <h1 className="text-2xl font-bold text-foreground" data-testid="applications-title">
               Applications
             </h1>
             <p className="text-muted-foreground">Review and manage admission applications</p>
@@ -213,7 +213,7 @@ const AdminApplications = () => {
             ) : (
               <div className="text-center py-12">
                 <ClipboardList className="w-16 h-16 text-slate-300 mx-auto mb-4" />
-                <h3 className="text-lg font-semibold text-ink mb-2">No Applications</h3>
+                <h3 className="text-lg font-semibold text-foreground mb-2">No Applications</h3>
                 <p className="text-muted-foreground">No applications match the selected filter</p>
               </div>
             )}

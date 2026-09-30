@@ -55,13 +55,13 @@ const AdminMessages = () => {
   const unreadCount = messages.filter(m => !m.read).length;
 
   return (
-    <div className="min-h-screen bg-cream">
+    <div className="min-h-screen bg-background">
       <AdminSidebar />
       
       <main className="ml-64 p-8">
         {/* Header */}
         <div className="mb-8">
-          <h1 className="text-2xl font-bold text-ink" data-testid="messages-title">
+          <h1 className="text-2xl font-bold text-foreground" data-testid="messages-title">
             Contact Messages
           </h1>
           <p className="text-muted-foreground">
@@ -92,7 +92,7 @@ const AdminMessages = () => {
                   <CardContent className="p-4">
                     <div className="flex items-start justify-between">
                       <div>
-                        <p className={`font-medium ${!message.read ? "text-primary" : "text-ink"}`}>
+                        <p className={`font-medium ${!message.read ? "text-primary" : "text-foreground"}`}>
                           {message.name}
                         </p>
                         <p className="text-sm text-muted-foreground truncate">{message.subject}</p>
@@ -135,8 +135,8 @@ const AdminMessages = () => {
                 </CardHeader>
                 <CardContent className="p-6">
                   {/* Sender Info */}
-                  <div className="bg-cream rounded-lg p-4 mb-6">
-                    <p className="font-semibold text-ink">{selectedMessage.name}</p>
+                  <div className="bg-background rounded-lg p-4 mb-6">
+                    <p className="font-semibold text-foreground">{selectedMessage.name}</p>
                     <div className="flex flex-wrap gap-4 mt-2 text-sm text-muted-foreground">
                       <a 
                         href={`mailto:${selectedMessage.email}`} 
@@ -159,7 +159,7 @@ const AdminMessages = () => {
 
                   {/* Message Content */}
                   <div>
-                    <h4 className="font-semibold text-ink mb-3">Message</h4>
+                    <h4 className="font-semibold text-foreground mb-3">Message</h4>
                     <p className="text-muted-foreground whitespace-pre-wrap">{selectedMessage.message}</p>
                   </div>
 
@@ -179,7 +179,7 @@ const AdminMessages = () => {
                 <CardContent className="h-full flex items-center justify-center py-24">
                   <div className="text-center">
                     <MessageSquare className="w-16 h-16 text-slate-300 mx-auto mb-4" />
-                    <h3 className="text-lg font-semibold text-ink mb-2">Select a Message</h3>
+                    <h3 className="text-lg font-semibold text-foreground mb-2">Select a Message</h3>
                     <p className="text-muted-foreground">Click on a message to view its content</p>
                   </div>
                 </CardContent>

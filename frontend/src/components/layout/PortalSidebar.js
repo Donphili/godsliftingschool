@@ -1,5 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
+import ThemeToggle from "../ThemeToggle";
 import {
   LayoutDashboard,
   FileText,
@@ -23,7 +24,7 @@ const PortalSidebar = () => {
   const isActive = (path) => location.pathname === path;
 
   return (
-    <aside className="w-64 bg-white border-r border-ink/10 min-h-screen fixed left-0 top-0 z-40">
+    <aside className="w-64 bg-card border-r border-sticker/10 min-h-screen fixed left-0 top-0 z-40">
       <div className="p-6">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3 mb-8" data-testid="portal-logo">
@@ -31,22 +32,23 @@ const PortalSidebar = () => {
             <GraduationCap className="w-6 h-6 text-white -rotate-3" />
           </div>
           <div>
-            <h1 className="font-display font-bold text-sm text-ink">God's Lifting</h1>
+            <h1 className="font-display font-bold text-sm text-foreground">God's Lifting</h1>
             <p className="text-xs text-muted-foreground">Student Portal</p>
           </div>
         </Link>
 
         {/* User Info */}
-        <div className="bg-cream rounded-xl p-4 mb-6">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+        <div className="bg-background rounded-xl p-4 mb-6 flex items-center justify-between gap-2">
+          <div className="flex items-center gap-3 min-w-0">
+            <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
               <User className="w-5 h-5 text-primary" />
             </div>
-            <div>
-              <p className="font-semibold text-ink text-sm">{user?.full_name}</p>
+            <div className="min-w-0">
+              <p className="font-semibold text-foreground text-sm truncate">{user?.full_name}</p>
               <p className="text-xs text-muted-foreground capitalize">{user?.role}</p>
             </div>
           </div>
+          <ThemeToggle className="shrink-0" />
         </div>
 
         {/* Navigation */}
@@ -61,7 +63,7 @@ const PortalSidebar = () => {
                 className={`flex items-center gap-3 px-4 py-3 rounded-xl font-semibold text-sm transition-colors duration-200 ${
                   isActive(item.path)
                     ? "bg-primary text-white"
-                    : "text-muted-foreground hover:bg-cream hover:text-primary"
+                    : "text-muted-foreground hover:bg-background hover:text-primary"
                 }`}
               >
                 <Icon className="w-5 h-5" />
@@ -75,7 +77,7 @@ const PortalSidebar = () => {
         <div className="absolute bottom-6 left-6 right-6 space-y-2">
           <Link
             to="/"
-            className="flex items-center gap-3 px-4 py-3 rounded-lg text-muted-foreground hover:bg-cream font-medium text-sm"
+            className="flex items-center gap-3 px-4 py-3 rounded-lg text-muted-foreground hover:bg-background font-medium text-sm"
             data-testid="portal-back-to-site"
           >
             <Home className="w-5 h-5" />
@@ -83,7 +85,7 @@ const PortalSidebar = () => {
           </Link>
           <button
             onClick={logout}
-            className="flex items-center gap-3 px-4 py-3 rounded-lg text-red-600 hover:bg-red-50 font-medium text-sm w-full"
+            className="flex items-center gap-3 px-4 py-3 rounded-lg text-coral hover:bg-coral/10 font-medium text-sm w-full"
             data-testid="portal-logout"
           >
             <LogOut className="w-5 h-5" />

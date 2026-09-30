@@ -68,11 +68,11 @@ const AdminSettings = () => {
   };
 
   return (
-    <div className="min-h-screen bg-cream">
+    <div className="min-h-screen bg-background">
       <AdminSidebar />
       <main className="ml-64 p-8">
         <div className="mb-8">
-          <h1 className="text-2xl font-bold text-ink" data-testid="settings-title">Settings</h1>
+          <h1 className="text-2xl font-bold text-foreground" data-testid="settings-title">Settings</h1>
           <p className="text-muted-foreground">Manage your account and preferences</p>
         </div>
 
@@ -94,7 +94,7 @@ const AdminSettings = () => {
               <form onSubmit={handleProfileSubmit} className="space-y-4">
                 <div>
                   <Label>Email</Label>
-                  <Input value={user?.email || ""} disabled className="mt-2 bg-cream" />
+                  <Input value={user?.email || ""} disabled className="mt-2 bg-background" />
                   <p className="text-xs text-muted-foreground mt-1">Email cannot be changed</p>
                 </div>
                 <div>

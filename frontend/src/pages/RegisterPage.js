@@ -59,7 +59,7 @@ const RegisterPage = () => {
       <div className="w-full max-w-md">
         {/* Logo */}
         <Link to="/" className="flex items-center justify-center gap-3 mb-8">
-          <div className="w-14 h-14 rounded-full bg-white flex items-center justify-center">
+          <div className="w-14 h-14 rounded-full bg-card flex items-center justify-center">
             <GraduationCap className="w-8 h-8 text-primary" />
           </div>
           <div className="text-white">
@@ -68,7 +68,7 @@ const RegisterPage = () => {
           </div>
         </Link>
 
-        <Card className="border-4 border-ink shadow-sticker-lg rounded-[24px]" data-testid="register-card">
+        <Card className="border-4 border-sticker shadow-sticker-lg rounded-[24px]" data-testid="register-card">
           <CardHeader className="text-center">
             <CardTitle className="text-2xl">Create Account</CardTitle>
             <CardDescription>Register to access the student portal</CardDescription>

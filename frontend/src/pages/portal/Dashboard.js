@@ -62,13 +62,13 @@ const PortalDashboard = () => {
   const savedStudentId = localStorage.getItem("linked_student_id");
 
   return (
-    <div className="min-h-screen bg-cream">
+    <div className="min-h-screen bg-background">
       <PortalSidebar />
       
       <main className="ml-64 p-8">
         {/* Header */}
         <div className="mb-8">
-          <h1 className="text-2xl font-bold text-ink" data-testid="portal-welcome">
+          <h1 className="text-2xl font-bold text-foreground" data-testid="portal-welcome">
             Welcome, {user?.full_name}
           </h1>
           <p className="text-muted-foreground">Access your results and make payments</p>
@@ -115,7 +115,7 @@ const PortalDashboard = () => {
           <Card className="mb-8 border-0 shadow-card bg-primary text-white" data-testid="student-info-card">
             <CardContent className="p-6">
               <div className="flex items-center gap-4">
-                <div className="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center">
+                <div className="w-16 h-16 rounded-full bg-card/20 flex items-center justify-center">
                   <User className="w-8 h-8" />
                 </div>
                 <div>
@@ -137,7 +137,7 @@ const PortalDashboard = () => {
                   <FileText className="w-7 h-7 text-emerald-600 group-hover:text-white" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="font-bold text-ink">View Results</h3>
+                  <h3 className="font-bold text-foreground">View Results</h3>
                   <p className="text-muted-foreground text-sm">Check your academic performance</p>
                 </div>
                 <ArrowRight className="w-5 h-5 text-slate-400 group-hover:text-primary" />
@@ -152,7 +152,7 @@ const PortalDashboard = () => {
                   <CreditCard className="w-7 h-7 text-sun group-hover:text-white" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="font-bold text-ink">Make Payment</h3>
+                  <h3 className="font-bold text-foreground">Make Payment</h3>
                   <p className="text-muted-foreground text-sm">Pay school fees securely online</p>
                 </div>
                 <ArrowRight className="w-5 h-5 text-slate-400 group-hover:text-primary" />
@@ -183,7 +183,7 @@ const PortalDashboard = () => {
                       <Bell className="w-6 h-6 text-slate-400" />
                     </div>
                     <div>
-                      <h4 className="font-medium text-ink">{item.title}</h4>
+                      <h4 className="font-medium text-foreground">{item.title}</h4>
                       <p className="text-muted-foreground text-sm line-clamp-2">{item.content}</p>
                     </div>
                   </div>

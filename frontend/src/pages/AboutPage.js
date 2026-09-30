@@ -65,7 +65,7 @@ const AboutPage = () => {
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-3xl font-bold text-ink mb-6">Our Beginning</h2>
+              <h2 className="text-3xl font-bold text-foreground mb-6">Our Beginning</h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
                   God's Lifting International School was fully established in <strong>January 2023</strong>, 
@@ -96,7 +96,7 @@ const AboutPage = () => {
       </section>
 
       {/* Vision & Mission */}
-      <section className="section-padding bg-cream">
+      <section className="section-padding bg-background">
         <div className="container-custom">
           <div className="grid md:grid-cols-2 gap-8">
             <Card className="p-8 border-0 shadow-card" data-testid="vision-card">
@@ -104,7 +104,7 @@ const AboutPage = () => {
                 <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
                   <Eye className="w-7 h-7 text-primary" />
                 </div>
-                <h3 className="text-2xl font-bold text-ink mb-4">Our Vision</h3>
+                <h3 className="text-2xl font-bold text-foreground mb-4">Our Vision</h3>
                 <p className="text-muted-foreground leading-relaxed">
                   To be a leading educational institution that nurtures globally competitive students 
                   who are grounded in faith, excellence, and character. We envision producing future 
@@ -118,7 +118,7 @@ const AboutPage = () => {
                 <div className="w-14 h-14 rounded-xl bg-sun/20 flex items-center justify-center mb-6">
                   <Target className="w-7 h-7 text-sun" />
                 </div>
-                <h3 className="text-2xl font-bold text-ink mb-4">Our Mission</h3>
+                <h3 className="text-2xl font-bold text-foreground mb-4">Our Mission</h3>
                 <p className="text-muted-foreground leading-relaxed">
                   To provide qualitative education that enables pupils and students to compete with 
                   global standards. We achieve this through dedicated teachers, modern facilities, 
@@ -135,7 +135,7 @@ const AboutPage = () => {
         <div className="container-custom">
           <div className="text-center mb-16">
             <p className="text-primary font-semibold mb-4">Our Values</p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-ink mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
               What We Stand For
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -156,7 +156,7 @@ const AboutPage = () => {
                     <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
                       <Icon className="w-7 h-7 text-primary" />
                     </div>
-                    <h3 className="text-lg font-bold text-ink mb-2">{value.title}</h3>
+                    <h3 className="text-lg font-bold text-foreground mb-2">{value.title}</h3>
                     <p className="text-muted-foreground text-sm">{value.description}</p>
                   </CardContent>
                 </Card>
@@ -170,7 +170,7 @@ const AboutPage = () => {
       <section className="section-padding bg-ink">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center">
-            <div className="w-20 h-20 rounded-full bg-white/10 flex items-center justify-center mx-auto mb-6">
+            <div className="w-20 h-20 rounded-full bg-card/10 flex items-center justify-center mx-auto mb-6">
               <GraduationCap className="w-10 h-10 text-sun" />
             </div>
             <h2 className="text-3xl font-bold text-white mb-4">Our Founder</h2>
@@ -190,7 +190,7 @@ const AboutPage = () => {
         <div className="container-custom">
           <div className="text-center mb-16">
             <p className="text-primary font-semibold mb-4">Our Facilities</p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-ink mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
               World-Class Learning Environment
             </h2>
           </div>
@@ -207,7 +207,7 @@ const AboutPage = () => {
               <CardContent className="p-6">
                 <div className="flex items-center gap-3 mb-3">
                   <FlaskConical className="w-6 h-6 text-primary" />
-                  <h3 className="text-xl font-bold text-ink">Science Laboratory</h3>
+                  <h3 className="text-xl font-bold text-foreground">Science Laboratory</h3>
                 </div>
                 <p className="text-muted-foreground">
                   Fully equipped laboratory for practical science experiments, fostering 
@@ -227,7 +227,7 @@ const AboutPage = () => {
               <CardContent className="p-6">
                 <div className="flex items-center gap-3 mb-3">
                   <Monitor className="w-6 h-6 text-primary" />
-                  <h3 className="text-xl font-bold text-ink">Computer Lab</h3>
+                  <h3 className="text-xl font-bold text-foreground">Computer Lab</h3>
                 </div>
                 <p className="text-muted-foreground">
                   State-of-the-art computer facilities ensuring digital literacy and 
@@ -247,7 +247,7 @@ const AboutPage = () => {
               <CardContent className="p-6">
                 <div className="flex items-center gap-3 mb-3">
                   <Library className="w-6 h-6 text-primary" />
-                  <h3 className="text-xl font-bold text-ink">Library</h3>
+                  <h3 className="text-xl font-bold text-foreground">Library</h3>
                 </div>
                 <p className="text-muted-foreground">
                   Well-stocked library with diverse books and learning resources 
@@ -260,11 +260,11 @@ const AboutPage = () => {
       </section>
 
       {/* Programs Overview */}
-      <section className="section-padding bg-cream">
+      <section className="section-padding bg-background">
         <div className="container-custom">
           <div className="text-center mb-16">
             <p className="text-primary font-semibold mb-4">Our Programs</p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-ink mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
               Academic Programs
             </h2>
           </div>
@@ -275,7 +275,7 @@ const AboutPage = () => {
                 <Star className="w-20 h-20 text-white/80" />
               </div>
               <CardContent className="p-6">
-                <h3 className="text-xl font-bold text-ink mb-2">Pre-School</h3>
+                <h3 className="text-xl font-bold text-foreground mb-2">Pre-School</h3>
                 <p className="text-muted-foreground">
                   Nurturing young minds through play-based learning, introducing foundational 
                   skills in a safe and loving environment.
@@ -288,7 +288,7 @@ const AboutPage = () => {
                 <BookOpen className="w-20 h-20 text-white/80" />
               </div>
               <CardContent className="p-6">
-                <h3 className="text-xl font-bold text-ink mb-2">Primary Section</h3>
+                <h3 className="text-xl font-bold text-foreground mb-2">Primary Section</h3>
                 <p className="text-muted-foreground">
                   Basic 1 to 6 classes providing comprehensive education in core subjects 
                   with emphasis on literacy and numeracy.
@@ -301,7 +301,7 @@ const AboutPage = () => {
                 <GraduationCap className="w-20 h-20 text-white/80" />
               </div>
               <CardContent className="p-6">
-                <h3 className="text-xl font-bold text-ink mb-2">Secondary Section</h3>
+                <h3 className="text-xl font-bold text-foreground mb-2">Secondary Section</h3>
                 <p className="text-muted-foreground">
                   JSS and SSS classes preparing students for WAEC, NECO, and other 
                   qualifying examinations.

@@ -113,14 +113,14 @@ const AdminNews = () => {
   };
 
   return (
-    <div className="min-h-screen bg-cream">
+    <div className="min-h-screen bg-background">
       <AdminSidebar />
       
       <main className="ml-64 p-8">
         {/* Header */}
         <div className="flex items-center justify-between mb-8">
           <div>
-            <h1 className="text-2xl font-bold text-ink" data-testid="news-admin-title">
+            <h1 className="text-2xl font-bold text-foreground" data-testid="news-admin-title">
               News & Announcements
             </h1>
             <p className="text-muted-foreground">Manage school news and updates</p>
@@ -209,7 +209,7 @@ const AdminNews = () => {
                 </div>
                 <CardContent className="p-4">
                   <p className="text-xs text-muted-foreground mb-2">{formatDate(item.created_at)}</p>
-                  <h3 className="font-bold text-ink mb-2 line-clamp-2">{item.title}</h3>
+                  <h3 className="font-bold text-foreground mb-2 line-clamp-2">{item.title}</h3>
                   <p className="text-muted-foreground text-sm line-clamp-3">{item.content}</p>
                   <div className="flex gap-2 mt-4">
                     <Button variant="outline" size="sm" onClick={() => handleEdit(item)}>
@@ -229,7 +229,7 @@ const AdminNews = () => {
           <Card className="border-0 shadow-card">
             <CardContent className="py-12 text-center">
               <Newspaper className="w-16 h-16 text-slate-300 mx-auto mb-4" />
-              <h3 className="text-lg font-semibold text-ink mb-2">No News Posted</h3>
+              <h3 className="text-lg font-semibold text-foreground mb-2">No News Posted</h3>
               <p className="text-muted-foreground">Post your first news article</p>
             </CardContent>
           </Card>

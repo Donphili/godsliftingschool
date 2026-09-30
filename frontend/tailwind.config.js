@@ -18,6 +18,7 @@ module.exports = {
   		},
   		colors: {
   			ink: 'hsl(var(--ink))',
+  			sticker: 'hsl(var(--sticker-border))',
   			violet: {
   				DEFAULT: 'hsl(var(--brand-violet))',
   				'2': 'hsl(var(--brand-violet-2))'

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 import { Button } from "../ui/button";
+import ThemeToggle from "../ThemeToggle";
 import { Menu, X, GraduationCap, User, LogOut } from "lucide-react";
 import {
   DropdownMenu,
@@ -34,7 +35,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-cream/85 backdrop-blur-md border-b-2 border-ink/5">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/85 backdrop-blur-md border-b-2 border-sticker/5">
       <div className="container-custom">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
@@ -43,7 +44,7 @@ const Navbar = () => {
               <GraduationCap className="w-6 h-6 text-white -rotate-3" />
             </div>
             <div className="hidden sm:block">
-              <h1 className="font-display font-bold text-lg text-ink leading-tight">God's Lifting</h1>
+              <h1 className="font-display font-bold text-lg text-foreground leading-tight">God's Lifting</h1>
               <p className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground font-semibold">International School</p>
             </div>
           </Link>
@@ -108,6 +109,7 @@ const Navbar = () => {
                     Apply Now
                   </Button>
                 </Link>
+                <ThemeToggle />
               </>
             )}
           </div>
@@ -125,7 +127,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-white border-t border-slate-200 py-4 animate-fade-in">
+        <div className="lg:hidden bg-card border-t border-slate-200 py-4 animate-fade-in">
           <div className="container-custom flex flex-col gap-2">
             {navLinks.map((link) => (
               <Link
@@ -135,7 +137,7 @@ const Navbar = () => {
                 className={`px-4 py-3 rounded-lg font-medium ${
                   isActive(link.path) 
                     ? "bg-primary/10 text-primary" 
-                    : "text-muted-foreground hover:bg-cream"
+                    : "text-muted-foreground hover:bg-background"
                 }`}
               >
                 {link.name}
@@ -163,7 +165,7 @@ const Navbar = () => {
                   <Link
                     to="/login"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="px-4 py-3 rounded-lg font-medium text-muted-foreground hover:bg-cream"
+                    className="px-4 py-3 rounded-lg font-medium text-muted-foreground hover:bg-background"
                   >
                     Login
                   </Link>

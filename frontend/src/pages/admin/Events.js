@@ -109,14 +109,14 @@ const AdminEvents = () => {
   };
 
   return (
-    <div className="min-h-screen bg-cream">
+    <div className="min-h-screen bg-background">
       <AdminSidebar />
       
       <main className="ml-64 p-8">
         {/* Header */}
         <div className="flex items-center justify-between mb-8">
           <div>
-            <h1 className="text-2xl font-bold text-ink" data-testid="events-admin-title">
+            <h1 className="text-2xl font-bold text-foreground" data-testid="events-admin-title">
               Events
             </h1>
             <p className="text-muted-foreground">Manage school events and calendar</p>
@@ -233,7 +233,7 @@ const AdminEvents = () => {
                       </span>
                     </div>
                     <div className="flex-1 p-4">
-                      <h3 className="font-bold text-ink">{event.title}</h3>
+                      <h3 className="font-bold text-foreground">{event.title}</h3>
                       <p className="text-muted-foreground text-sm mb-3">{event.description}</p>
                       <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
                         <span className="flex items-center gap-1">
@@ -263,7 +263,7 @@ const AdminEvents = () => {
           <Card className="border-0 shadow-card">
             <CardContent className="py-12 text-center">
               <CalendarDays className="w-16 h-16 text-slate-300 mx-auto mb-4" />
-              <h3 className="text-lg font-semibold text-ink mb-2">No Events</h3>
+              <h3 className="text-lg font-semibold text-foreground mb-2">No Events</h3>
               <p className="text-muted-foreground">Add your first event</p>
             </CardContent>
           </Card>

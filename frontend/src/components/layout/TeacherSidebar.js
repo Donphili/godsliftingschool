@@ -1,5 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
+import ThemeToggle from "../ThemeToggle";
 import {
   LayoutDashboard,
   Users,
@@ -20,14 +21,15 @@ const TeacherSidebar = () => {
 
   return (
     <aside className="fixed left-0 top-0 h-screen w-64 bg-ink text-white flex flex-col z-50" data-testid="teacher-sidebar">
-      <div className="p-6 border-b border-white/10">
-        <div className="flex items-center gap-3">
-          <GraduationCap className="w-8 h-8 text-sky" />
-          <div>
-            <h2 className="font-display font-bold text-sm">God's Lifting</h2>
+      <div className="p-6 border-b border-white/10 flex items-center justify-between gap-2">
+        <div className="flex items-center gap-3 min-w-0">
+          <GraduationCap className="w-8 h-8 text-sky shrink-0" />
+          <div className="min-w-0">
+            <h2 className="font-display font-bold text-sm truncate">God's Lifting</h2>
             <p className="text-xs text-white/50">Teacher Portal</p>
           </div>
         </div>
+        <ThemeToggle className="!border-white/20 !bg-white/10 shrink-0" />
       </div>
 
       <nav className="flex-1 py-4">
@@ -41,7 +43,7 @@ const TeacherSidebar = () => {
               className={`flex items-center gap-3 px-6 py-3 text-sm transition-colors ${
                 active
                   ? "bg-sky/20 text-sky border-r-2 border-sky"
-                  : "text-white/60 hover:bg-white/10 hover:text-white"
+                  : "text-white/60 hover:bg-card/10 hover:text-white"
               }`}
             >
               <Icon className="w-4 h-4" />

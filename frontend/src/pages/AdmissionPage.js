@@ -407,9 +407,9 @@ const AdmissionPage = () => {
                       <div className="w-20 h-20 rounded-full bg-emerald-100 flex items-center justify-center mx-auto mb-6">
                         <CheckCircle className="w-10 h-10 text-emerald-600" />
                       </div>
-                      <h3 className="text-2xl font-bold text-ink mb-2">Application Submitted!</h3>
+                      <h3 className="text-2xl font-bold text-foreground mb-2">Application Submitted!</h3>
                       <p className="text-muted-foreground mb-6">Your application has been received successfully.</p>
-                      <div className="bg-cream rounded-xl p-6 max-w-sm mx-auto">
+                      <div className="bg-background rounded-xl p-6 max-w-sm mx-auto">
                         <p className="text-sm text-muted-foreground mb-2">Your Application Number</p>
                         <p className="text-2xl font-bold text-primary" data-testid="application-number">{applicationNumber}</p>
                         <p className="text-xs text-muted-foreground mt-2">Please save this number for tracking your application status.</p>
@@ -451,8 +451,8 @@ const AdmissionPage = () => {
                   </Button>
                   
                   {statusResult && (
-                    <div className="mt-4 p-4 bg-cream rounded-lg">
-                      <p className="font-semibold text-ink">{statusResult.full_name}</p>
+                    <div className="mt-4 p-4 bg-background rounded-lg">
+                      <p className="font-semibold text-foreground">{statusResult.full_name}</p>
                       <p className="text-sm text-muted-foreground">{statusResult.class_applying_for}</p>
                       <div className="mt-2">
                         <span className={`px-3 py-1 rounded-full text-sm font-medium ${

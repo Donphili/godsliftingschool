@@ -84,18 +84,18 @@ const HomePage = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="pt-20 relative overflow-hidden bg-cream">
+      <section className="pt-20 relative overflow-hidden bg-background">
         <div className="blob w-[450px] h-[450px] bg-sun -top-32 -right-10" />
         <div className="blob w-[350px] h-[350px] bg-sky top-32 -left-32" />
 
         <div className="container-custom relative py-20 lg:py-28">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-up">
-              <div className="inline-flex items-center gap-2 bg-white border-2 border-ink rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-wide mb-6 shadow-sticker">
+              <div className="inline-flex items-center gap-2 bg-card border-2 border-sticker rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-wide mb-6 shadow-sticker">
                 <span className="w-2 h-2 rounded-full bg-lime animate-pulse" />
                 Established January 2023
               </div>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.05] mb-6 text-ink">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.05] mb-6 text-foreground">
                 Building Future{" "}
                 <span className="relative inline-block">
                   <span className="relative z-10">Global Leaders</span>
@@ -121,7 +121,7 @@ const HomePage = () => {
                   <Button 
                     size="lg" 
                     variant="outline" 
-                    className="border-2 border-ink text-ink hover:bg-ink hover:text-white rounded-full px-8 font-bold"
+                    className="border-2 border-sticker text-foreground hover:bg-ink hover:text-white rounded-full px-8 font-bold"
                     data-testid="hero-learn-more-btn"
                   >
                     Learn More
@@ -131,14 +131,14 @@ const HomePage = () => {
             </div>
             
             <div className="relative hidden lg:block">
-              <div className="relative z-10 rounded-[28px] overflow-hidden border-4 border-ink rotate-2 shadow-sticker-violet">
+              <div className="relative z-10 rounded-[28px] overflow-hidden border-4 border-sticker rotate-2 shadow-sticker-violet">
                 <img
                   src="https://static.prod-images.emergentagent.com/jobs/532fef3c-ad1c-4187-8f2c-ad4d85d1c7d2/images/84b40b7d1074d4d60e77f087336d0e7d0b956c79014bf91360ce380a8bb1099b.png"
                   alt="Nigerian students in premium school campus"
                   className="w-full h-[500px] object-cover"
                 />
               </div>
-              <div className="absolute -bottom-8 -left-10 z-20 bg-sun rounded-2xl px-6 py-4 border-4 border-ink -rotate-3 shadow-sticker">
+              <div className="absolute -bottom-8 -left-10 z-20 bg-sun rounded-2xl px-6 py-4 border-4 border-sticker -rotate-3 shadow-sticker">
                 <p className="text-2xl font-bold text-ink font-display">"Raised right,<br />rising fast."</p>
               </div>
             </div>
@@ -147,7 +147,7 @@ const HomePage = () => {
       </section>
 
       {/* Marquee strip */}
-      <div className="bg-ink text-white py-3 overflow-hidden border-y-4 border-ink">
+      <div className="bg-ink text-white py-3 overflow-hidden border-y-4 border-sticker">
         <div className="flex whitespace-nowrap animate-marquee text-sm font-bold tracking-wide font-display">
           {Array(2).fill(0).map((_, i) => (
             <span key={i} className="flex shrink-0">
@@ -161,11 +161,11 @@ const HomePage = () => {
       </div>
 
       {/* Features Section */}
-      <section className="section-padding bg-cream">
+      <section className="section-padding bg-background">
         <div className="container-custom">
           <div className="text-center mb-16">
             <p className="text-primary font-semibold mb-4">Our Programs</p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-ink mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
               Comprehensive Education for All Ages
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -186,14 +186,14 @@ const HomePage = () => {
               return (
                 <Card 
                   key={index} 
-                  className={`group cursor-pointer border-4 border-ink rounded-[24px] bg-white shadow-sticker hover:-translate-y-1 ${accent.hoverShadow} transition-all`}
+                  className={`group cursor-pointer border-4 border-sticker rounded-[24px] bg-card shadow-sticker hover:-translate-y-1 ${accent.hoverShadow} transition-all`}
                   data-testid={`feature-card-${index}`}
                 >
                   <CardContent className="p-8">
-                    <div className={`w-14 h-14 rounded-2xl ${accent.chip} flex items-center justify-center mb-6 border-2 border-ink`}>
-                      <Icon className="w-7 h-7 text-ink" />
+                    <div className={`w-14 h-14 rounded-2xl ${accent.chip} flex items-center justify-center mb-6 border-2 border-sticker`}>
+                      <Icon className="w-7 h-7 text-foreground" />
                     </div>
-                    <h3 className="text-xl font-bold text-ink mb-3">{feature.title}</h3>
+                    <h3 className="text-xl font-bold text-foreground mb-3">{feature.title}</h3>
                     <p className="text-muted-foreground font-medium">{feature.description}</p>
                   </CardContent>
                 </Card>
@@ -209,7 +209,7 @@ const HomePage = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <p className="text-primary font-semibold mb-4">Our Facilities</p>
-              <h2 className="text-3xl sm:text-4xl font-bold text-ink mb-6">
+              <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-6">
                 World-Class Learning Environment
               </h2>
               <p className="text-muted-foreground mb-8 leading-relaxed">
@@ -221,12 +221,12 @@ const HomePage = () => {
                 {facilities.map((facility, index) => {
                   const Icon = facility.icon;
                   return (
-                    <div key={index} className="flex items-start gap-4 p-4 rounded-xl bg-cream">
-                      <div className="w-12 h-12 rounded-lg bg-sky/30 border-2 border-ink flex items-center justify-center flex-shrink-0">
+                    <div key={index} className="flex items-start gap-4 p-4 rounded-xl bg-background">
+                      <div className="w-12 h-12 rounded-lg bg-sky/30 border-2 border-sticker flex items-center justify-center flex-shrink-0">
                         <Icon className="w-6 h-6 text-primary" />
                       </div>
                       <div>
-                        <h4 className="font-semibold text-ink">{facility.title}</h4>
+                        <h4 className="font-semibold text-foreground">{facility.title}</h4>
                         <p className="text-muted-foreground text-sm">{facility.description}</p>
                       </div>
                     </div>
@@ -240,24 +240,24 @@ const HomePage = () => {
                 <img
                   src="https://static.prod-images.emergentagent.com/jobs/532fef3c-ad1c-4187-8f2c-ad4d85d1c7d2/images/f13ff150485209848e7ab4cffcbc028fd0dd49b22c54201c3f5556aaefa1f5b9.png"
                   alt="Nigerian students in science laboratory"
-                  className="rounded-[20px] border-4 border-ink shadow-sticker w-full h-48 object-cover"
+                  className="rounded-[20px] border-4 border-sticker shadow-sticker w-full h-48 object-cover"
                 />
                 <img
                   src="https://static.prod-images.emergentagent.com/jobs/532fef3c-ad1c-4187-8f2c-ad4d85d1c7d2/images/9e18d325f73fd703d622192ee66f2c5790c2776dec2ade22c27997c03c2a4ba7.png"
                   alt="Nigerian students in modern library"
-                  className="rounded-[20px] border-4 border-ink shadow-sticker w-full h-64 object-cover"
+                  className="rounded-[20px] border-4 border-sticker shadow-sticker w-full h-64 object-cover"
                 />
               </div>
               <div className="space-y-4 pt-8">
                 <img
                   src="https://static.prod-images.emergentagent.com/jobs/532fef3c-ad1c-4187-8f2c-ad4d85d1c7d2/images/15e3c1b86a6f136f6baec00d483c82c149ade038280040c659dcac680fd88579.png"
                   alt="Nigerian students in computer lab"
-                  className="rounded-[20px] border-4 border-ink shadow-sticker w-full h-64 object-cover"
+                  className="rounded-[20px] border-4 border-sticker shadow-sticker w-full h-64 object-cover"
                 />
                 <img
                   src="https://static.prod-images.emergentagent.com/jobs/532fef3c-ad1c-4187-8f2c-ad4d85d1c7d2/images/8edf40ed18b94c8734f784a34f37f76e763b08af432c2dca600fa9b4f41bcd69.png"
                   alt="Nigerian students sports activities"
-                  className="rounded-[20px] border-4 border-ink shadow-sticker w-full h-48 object-cover"
+                  className="rounded-[20px] border-4 border-sticker shadow-sticker w-full h-48 object-cover"
                 />
               </div>
             </div>
@@ -266,22 +266,22 @@ const HomePage = () => {
       </section>
 
       {/* About Preview */}
-      <section className="section-padding bg-cream">
+      <section className="section-padding bg-background">
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="relative">
               <img
                 src="https://static.prod-images.emergentagent.com/jobs/532fef3c-ad1c-4187-8f2c-ad4d85d1c7d2/images/1e8a2a07bfa1696716d958838f9aa35456e9f503b49dec75ad1a881e0ea8d673.png"
                 alt="Nigerian students at school assembly"
-                className="rounded-[28px] border-4 border-ink shadow-sticker-violet -rotate-1"
+                className="rounded-[28px] border-4 border-sticker shadow-sticker-violet -rotate-1"
               />
-              <div className="absolute -bottom-8 -right-8 bg-white p-6 rounded-2xl border-4 border-ink shadow-sticker rotate-2">
+              <div className="absolute -bottom-8 -right-8 bg-card p-6 rounded-2xl border-4 border-sticker shadow-sticker rotate-2">
                 <div className="flex items-center gap-4">
-                  <div className="w-16 h-16 rounded-full bg-sun border-2 border-ink flex items-center justify-center">
+                  <div className="w-16 h-16 rounded-full bg-sun border-2 border-sticker flex items-center justify-center">
                     <Trophy className="w-8 h-8 text-ink" />
                   </div>
                   <div>
-                    <p className="text-3xl font-bold text-ink">2+</p>
+                    <p className="text-3xl font-bold text-foreground">2+</p>
                     <p className="text-muted-foreground text-sm">Years of Excellence</p>
                   </div>
                 </div>
@@ -290,7 +290,7 @@ const HomePage = () => {
             
             <div>
               <p className="text-primary font-semibold mb-4">About Us</p>
-              <h2 className="text-3xl sm:text-4xl font-bold text-ink mb-6">
+              <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-6">
                 A Divine Mission for Education
               </h2>
               <p className="text-muted-foreground mb-6 leading-relaxed">
@@ -307,7 +307,7 @@ const HomePage = () => {
                 ].map((item, index) => (
                   <li key={index} className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-lime" fill="currentColor" fillOpacity={0.2} />
-                    <span className="text-ink font-medium">{item}</span>
+                    <span className="text-foreground font-medium">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -342,11 +342,11 @@ const HomePage = () => {
               return (
                 <div 
                   key={index} 
-                  className="bg-white/5 backdrop-blur-sm rounded-[24px] p-8 text-center border-2 border-white/15 hover:border-white/40 transition-colors"
+                  className="bg-card/5 backdrop-blur-sm rounded-[24px] p-8 text-center border-2 border-white/15 hover:border-white/40 transition-colors"
                   data-testid={`portal-feature-${index}`}
                 >
-                  <div className={`w-16 h-16 rounded-2xl ${chips[index % chips.length]} border-2 border-ink flex items-center justify-center mx-auto mb-6`}>
-                    <Icon className="w-8 h-8 text-ink" />
+                  <div className={`w-16 h-16 rounded-2xl ${chips[index % chips.length]} border-2 border-sticker flex items-center justify-center mx-auto mb-6`}>
+                    <Icon className="w-8 h-8 text-foreground" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
                   <p className="text-white/70">{feature.description}</p>
@@ -373,7 +373,7 @@ const HomePage = () => {
       {/* CTA Section */}
       <section className="section-padding">
         <div className="container-custom">
-          <div className="relative bg-gradient-to-r from-coral to-sun rounded-[28px] p-12 text-center border-4 border-ink shadow-sticker-lg overflow-hidden">
+          <div className="relative bg-gradient-to-r from-coral to-sun rounded-[28px] p-12 text-center border-4 border-sticker shadow-sticker-lg overflow-hidden">
             <div className="blob w-[300px] h-[300px] bg-violet/40 -bottom-24 -left-16" />
             <h2 className="relative text-3xl sm:text-4xl font-bold text-ink mb-4">
               Ready to Join Our Family?
