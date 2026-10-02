@@ -46,7 +46,7 @@ const TeacherStudents = () => {
   return (
     <div className="min-h-screen bg-background">
       <TeacherSidebar />
-      <main className="ml-64 p-8">
+      <main className="md:ml-64 pt-20 md:pt-8 px-8 pb-8">
         <div className="mb-8">
           <h1 className="text-2xl font-bold text-foreground" data-testid="teacher-students-title">My Students</h1>
           <p className="text-muted-foreground">Students in your assigned classes</p>

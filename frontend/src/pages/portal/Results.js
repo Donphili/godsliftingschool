@@ -216,7 +216,7 @@ Tel: 08034494498, 09012077546
     <div className="min-h-screen bg-background">
       <PortalSidebar />
       
-      <main className="ml-64 p-8">
+      <main className="md:ml-64 pt-20 md:pt-8 px-8 pb-8">
         {/* Header */}
         <div className="mb-8">
           <h1 className="text-2xl font-bold text-foreground" data-testid="results-title">

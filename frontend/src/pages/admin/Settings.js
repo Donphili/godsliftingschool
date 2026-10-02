@@ -70,7 +70,7 @@ const AdminSettings = () => {
   return (
     <div className="min-h-screen bg-background">
       <AdminSidebar />
-      <main className="ml-64 p-8">
+      <main className="md:ml-64 pt-20 md:pt-8 px-8 pb-8">
         <div className="mb-8">
           <h1 className="text-2xl font-bold text-foreground" data-testid="settings-title">Settings</h1>
           <p className="text-muted-foreground">Manage your account and preferences</p>
